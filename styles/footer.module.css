@@ -1,0 +1,163 @@
+/* styles/footer.module.css - dark footer, mobile-first */
+
+.footer{
+  background:#020202;
+  position: relative;
+  z-index: 1;
+  color:#fff;
+  padding:36px 60px;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+  border-top: 3px solid #5e2ef5; /* subtle accent like screenshot purple */
+}
+
+/* Top area with subscribe and contact */
+.topArea{
+  display:grid;
+  grid-template-columns: 1fr;
+  gap:18px;
+  max-width:1200px;
+  margin:0 auto 20px;
+}
+.left{ }
+.left h3{ margin:0 0 6px; font-size:18px; letter-spacing:1px; }
+.left p{ margin:0 0 14px; color:#c9c9c9; max-width:600px; }
+
+.subscribeForm{
+  display:flex;
+  gap:10px;
+  max-width:520px;
+}
+.subscribeForm input{
+  flex:1;
+  padding:12px 14px;
+  border-radius:4px;
+  border:0;
+  font-size:14px;
+  background-color: white;
+}
+.subscribeForm button{
+  background:transparent;
+  border:1px solid rgba(255,255,255,0.08);
+  padding:10px 18px;
+  color:#cfcfcf;
+  font-weight:700;
+  border-radius:4px;
+  cursor:pointer;
+}
+
+/* right column (contact + currency) */
+.right{
+  gap:28px;
+  justify-content:flex-end;
+  align-items:flex-start;
+  gap:24px;
+}
+.currency{
+  margin-top:15px;
+}
+.contact h4, .currency h4 { margin:0 0 4px; font-size:14px; }
+.contactItem{ color:#bdbdbd; margin-bottom:6px; }
+.currencyRow{ display:flex; align-items:center; gap:8px; margin-bottom:8px; }
+.flag{ font-size:20px; }
+.small{ color:#9a9a9a; font-size:12px; max-width:280px; }
+
+/* dividing rule */
+.rule{
+  border:0;
+  border-top:1px solid rgba(255,255,255,0.04);
+  margin:22px 0;
+}
+
+/* links area */
+.linksArea{
+  display:grid;
+  grid-template-columns: 1fr;
+  gap:18px;
+  max-width:1200px;
+  margin:0 auto;
+}
+.col{
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+}
+.col h4{ margin:0 0 10px; font-size:16px; text-transform:uppercase; letter-spacing:0.6px; }
+.brand{ font-size:20px; text-transform:none; }
+.linkList{ list-style:none; padding:0; margin:0; color:#cfcfcf; }
+.linkList li{ margin:8px 0; font-size:14px; color:#cfcfcf; cursor:pointer; }
+
+/* social + payments */
+.social{ display:flex; gap:12px; margin:6px 0 18px; }
+.socialIcon{
+  width:36px; height:36px; border-radius:50%; border:1px solid rgba(255,255,255,0.08);
+  display:inline-flex; align-items:center; justify-content:center; color:#fff; text-decoration:none;
+}
+.acceptsTitle{ margin-top:14px; font-size:14px; }
+
+.payments{ display:flex; gap:8px; flex-wrap:wrap; margin-top:10px; }
+.payIcon{
+  background:rgba(255,255,255,0.04);
+  padding:6px;
+  border-radius:8px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* copyright */
+.copy{ max-width:1200px; margin:22px auto 0; text-align:center; color:#bdbdbd; font-size:13px; }
+
+/* dropdown button */
+.dropdownBtn {
+  background: transparent;
+  border: none;
+  width: 100%;
+  padding: 0 0 5px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.dropdownBtn h4 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  display: inline-block;
+}
+.dropdownBtn span {
+  font-size: 18px;
+  margin-left: 8px;
+  display: inline-block;
+}
+
+/* ---------- Responsive: tablet & desktop ---------- */
+@media (max-width: 480px) {
+  .footer{ padding:36px 24px; }
+  .rule{ margin:18px 0; border-bottom: 1px solid #E5E5E5; }
+  .col {border-bottom: 1px solid #E5E5E5;}
+}
+@media (min-width: 600px) {
+  .footer{ padding:48px 36px; }
+  .topArea{ grid-template-columns: 1fr 1fr; gap:36px; }
+  .right{ flex-direction:column; align-items:flex-end; }
+  .linksArea{ grid-template-columns: repeat(2, 1fr); gap:36px; }
+}
+@media (min-width: 768px) {
+  .topArea{
+    grid-template-columns: 1fr 420px;
+    align-items:start;
+  }
+  .linksArea{
+    grid-template-columns: 1fr 1fr 420px;
+    align-items:start;
+    padding-top:12px;
+  }
+  .subscribeForm input{ max-width:420px; }
+}
+
+@media (min-width: 1100px) {
+  .subscribeForm input{ padding:14px 16px; }
+  .subscribeForm button{ padding:12px 20px; }
+  .left h3{ font-size:20px; }
+  .brand{ font-size:22px; }
+}

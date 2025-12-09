@@ -1,0 +1,90 @@
+.container{
+  border:1px solid #fafafa;
+  padding:8px;
+  border-radius:6px;
+  position:sticky;
+  top:92px;
+  height: fit-content;
+}
+.groupClearBtn{
+  font-size:13px;
+  background:transparent;
+  border:0;
+  text-decoration: underline;
+  margin: 20px 0 10px 0;
+  color:#BFC8CD;
+  cursor:pointer;
+}
+.header{ display:flex; justify-content:space-between; align-items:center; padding:8px 12px; border-bottom:1px solid #E5E5E5; }
+.clearBtn{ background:transparent; border:0; color:#b91c1c; cursor:pointer; font-size:13px; }
+.groups{ padding:10px; }
+.group{ border-bottom:1px solid #E5E5E5; padding:10px 0; }
+.groupTitle{ width:100%; display:flex; justify-content:space-between; align-items:center; background:transparent; border:0; cursor:pointer; font-weight:700; padding:6px 2px; color: #252020; }
+.chev{ color:var(--muted); }
+.optionList{ list-style:none; margin:8px 0 0 0; padding:0 6px; }
+.optionItem{ margin-bottom:8px; font-size:14px; color:#222; }
+.optLabel{ margin-left:8px; color:#222; }
+
+/*
+.sidebar {
+  border: 1px solid #b3e0ff;
+  width: 260px;
+  background: #fff;
+  font-family: 'Inter', sans-serif;
+}
+.group {
+  border-bottom: 1px dotted #009fe3;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+}
+.groupTitle {
+  font-weight: bold;
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  padding: 8px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.chev {
+  transition: transform 0.2s;
+}
+.chevOpen {
+  transform: rotate(180deg);
+  transition: transform 0.2s;
+}
+.groupContent {
+  padding: 8px 0 0 0;
+}
+.selectAllRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+.allLabel {
+  color: #222;
+}
+.unselectBtn {
+  background: none;
+  border: none;
+  color: #009fe3;
+  cursor: pointer;
+  font-size: 13px;
+  text-decoration: underline;
+}
+.optionList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.optionItem {
+  margin-bottom: 4px;
+}
+.optLabel {
+  margin-left: 6px;
+  font-size: 14px;
+} */

@@ -1,0 +1,126 @@
+/* styles/product-list.module.css */
+.toolbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:12px 0;
+  border-bottom:1px solid #E5E5E5;
+  border-top:1px solid #E5E5E5;
+  gap:12px;
+  margin-bottom:18px;
+}
+.toolbarLeft{ display:flex; align-items:center; gap:54px; }
+.hideBtn{
+  background:transparent;
+  border:0;
+  color:#888792;
+  font-weight:700;
+  cursor:pointer;
+  font-size:13px;
+  text-decoration: underline;
+}
+.itemCount{ color:var(--muted); font-size:13px; }
+.toolbarRight{ display:flex; align-items:center; gap:12px; }
+
+.searchBox input{
+  padding:8px 10px;
+  border-radius:8px;
+  border:1px solid var(--border);
+  min-width:180px;
+}
+
+.sortDropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  text-align: left;
+  min-width: 220px;
+  padding: 20px;
+  z-index: 3000;             /* ensure above any overlays */
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.sortItem{
+  display: flex;
+  align-items: right;
+  gap: 10px;
+  padding: 8px 0;
+  cursor: pointer;
+  font-size: 14px;
+  color: #252020;
+}
+
+.activeSortItem {
+  color: #020106;
+  font-weight: bold;
+}
+
+.sortBtn{
+  background:transparent;
+  border:1px solid var(--border);
+  padding:8px 10px;
+  border-radius:6px;
+  cursor:pointer;
+  font-weight:700;
+  color: #252020;
+}
+
+.content{
+  display:grid;
+  grid-template-columns: 280px 1fr;
+  gap:15px;
+  align-items:start;
+  margin-top:18px;
+}
+.forPadding{
+  display: none;}
+
+/* Sidebar hidden for narrow screens */
+.sidebar{ }
+.gridArea{ }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  transition: grid-template-columns 0.3s;
+}
+.gridFour {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.verticalDivider {
+    display: inline-block;
+    width: 1px;
+    height: 28px;
+    background: #e0e0e0;
+    margin: 0 12px;
+    vertical-align: middle;
+  }
+
+/* Responsive */
+@media (max-width: 945px) {
+ .content { grid-template-columns: 1fr; }
+  
+  .grid, .gridFour { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 728px) {
+  .grid, .gridFour { grid-template-columns: repeat(2, 1fr); }
+  
+  .toolbarRight .searchBox input{ min-width:120px; }
+  .toolbar{ align-items:stretch; gap:12px; }
+  .itemCount {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  .itemCount {
+    display: none;
+  }
+}
+@media (max-width: 390px) {
+  .grid, .gridFour { grid-template-columns: 1fr; }
+}
+
