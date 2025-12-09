@@ -121,14 +121,35 @@ export default function ProductList({ initialProducts = [] }) {
     return out;
   }, [initialProducts, filters, query, sortBy]);
 
+  // useEffect(() => {
+  //   setMounted(true);
+  //   function handleResize() {
+  //     setIsMobile(window.innerWidth <= 500);
+  //   }
+  //   handleResize();
+  //   window.addEventListener("resize", handleResize);
+  //   return () => window.removeEventListener("resize", handleResize);
+  // }, []);
+
   useEffect(() => {
-    setMounted(true);
+    // schedule the first mount flag update after effect begins (avoid sync setState in effect)
+    const raf =
+      typeof window !== "undefined"
+        ? window.requestAnimationFrame(() => setMounted(true))
+        : null;
+
     function handleResize() {
       setIsMobile(window.innerWidth <= 500);
     }
+
+    // set initial isMobile safely (window exists because we're in useEffect)
     handleResize();
+
     window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    return () => {
+      if (raf) window.cancelAnimationFrame(raf);
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
   return (

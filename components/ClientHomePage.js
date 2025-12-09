@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import Navbar from "../components/Navbar";
 import ProductList from "../components/ProductList";
 import { useEffect, useState } from "react";
@@ -27,7 +28,7 @@ export default function ClientHomePage({ products, logoSrc }) {
             marginTop: 18,
           }}
         >
-          <a
+          <Link
             href="/"
             style={{
               fontWeight: "bold",
@@ -39,8 +40,8 @@ export default function ClientHomePage({ products, logoSrc }) {
             }}
           >
             Home
-          </a>
-          <a
+          </Link>
+          <Link
             href="/shop"
             style={{
               fontWeight: "bold",
@@ -51,7 +52,7 @@ export default function ClientHomePage({ products, logoSrc }) {
             }}
           >
             Shop
-          </a>
+          </Link>
         </div>
       )}
       <main style={{ maxWidth: 1200, margin: "0 auto", padding: "32px 56px" }}>
