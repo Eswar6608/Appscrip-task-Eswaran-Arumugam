@@ -139,7 +139,7 @@ export default function Navbar({ logoSrc }) {
           </button>
 
           {/* cart placeholder (small circle uses product image later) */}
-          <Link href="/cart" className={styles.iconBtn} aria-label="Cart">
+          <Link href="/" className={styles.iconBtn} aria-label="Cart">
             <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden>
               <path
                 d="M6 6h15l-1.6 9.2a2 2 0 0 1-2 1.6H8.6a2 2 0 0 1-2-1.6L5 2H2"
