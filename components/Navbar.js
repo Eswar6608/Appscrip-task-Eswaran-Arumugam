@@ -185,19 +185,19 @@ export default function Navbar({ logoSrc }) {
 
       {/* center nav links (hidden on very small screens) */}
       <nav className={styles.nav}>
-        <Link href="/shop" className={styles.navLink}>
+        <Link href="/" className={styles.navLink}>
           SHOP
         </Link>
-        <Link href="/skills" className={styles.navLink}>
+        <Link href="/" className={styles.navLink}>
           SKILLS
         </Link>
-        <Link href="/stories" className={styles.navLink}>
+        <Link href="/" className={styles.navLink}>
           STORIES
         </Link>
-        <Link href="/about" className={styles.navLink}>
+        <Link href="/" className={styles.navLink}>
           ABOUT
         </Link>
-        <Link href="/contact" className={styles.navLink}>
+        <Link href="/" className={styles.navLink}>
           CONTACT US
         </Link>
       </nav>
@@ -205,19 +205,19 @@ export default function Navbar({ logoSrc }) {
       {/* mobile nav drawer (simple, minimal DOM) */}
       {mobileOpen && (
         <div className={styles.mobileNav}>
-          <Link href="/shop" className={styles.mobileLink}>
+          <Link href="/" className={styles.mobileLink}>
             Shop
           </Link>
-          <Link href="/skills" className={styles.mobileLink}>
+          <Link href="/" className={styles.mobileLink}>
             Skills
           </Link>
-          <Link href="/stories" className={styles.mobileLink}>
+          <Link href="/" className={styles.mobileLink}>
             Stories
           </Link>
-          <Link href="/about" className={styles.mobileLink}>
+          <Link href="/" className={styles.mobileLink}>
             About
           </Link>
-          <Link href="/contact" className={styles.mobileLink}>
+          <Link href="/" className={styles.mobileLink}>
             Contact
           </Link>
         </div>
